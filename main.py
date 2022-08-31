@@ -12,8 +12,8 @@ while YorN1 == 'y' or YorN2 == 'n':
 
     #-----------------------------------------------------------------------------------------------------------------------
     #Pegue a cidade, estado e país e mande para um geolocalizador e guarde a latitude e longitude.
-        openWeatherKey1 = '0c11e8f9f77dd06c9fa21d8ae22ed5ad'
-        openWeatherKey2 = 'e67a2ca1bcc81bcee174799a39257c90'
+        openWeatherKey1 = #'put openWeather token here'
+        openWeatherKey2 = #'put the second openWeather token here'
 
         r1 = requests.get('http://api.openweathermap.org/geo/1.0/direct?q=' + c_textSearch + '&limit=5&appid=' + openWeatherKey1)
         r2 = requests.get('http://api.openweathermap.org/geo/1.0/direct?q=' + c_textSearch + '&limit=5&appid=' + openWeatherKey2)
@@ -25,8 +25,8 @@ while YorN1 == 'y' or YorN2 == 'n':
         LatLon = f.LatLon(latLonText)
     #-----------------------------------------------------------------------------------------------------------------------
     #Pegue a latitude e longitude e use uma api que te fornece a chave do local para utilização do AccuWeather.
-        accuweatherAPIKey1 = 'ZFr9qpkIR7NF64zqLt2Gx5S5b4dq5DSL'
-        accuweatherAPIKey2 = '2qDFi9g4t06A4OYMydBcZAkUqDCjrsPg'
+        accuweatherAPIKey1 = #'put accuweatherAPIKey here'
+        accuweatherAPIKey2 = #'put the second accuweatherAPIKey here'
 
         r3 = requests.get('http://dataservice.accuweather.com/locations/v1/cities/geoposition/search?apikey='\
             + accuweatherAPIKey1 + '&q=' + LatLon)
